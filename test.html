@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Barres et Traits</title>
+    <style>
+        * {
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Barre horizontale principale */
+        .barre-horizontale {
+            width: 500px;
+            height: 5px;
+            background-color: blue;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Conteneur des éléments (position relative pour éviter les problèmes) */
+        .container {
+            display: flex;
+            position: relative;
+            gap: 3px;
+            top: -22px; /* Ajustement pour bien centrer les éléments */
+        }
+
+        /* Barres verticales bleues */
+        .barre-verticale {
+            width: 5px;
+            height: 50px;
+            background-color: blue;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Traits horizontaux gris */
+        .trait-horizontal {
+            width: 10px;
+            height: 5px;
+            background-color: gray;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre horizontale principale -->
+    <div class="barre-horizontale">
+        <div class="container" id="container"></div>
+    </div>
+
+    <script>
+        const container = document.getElementById("container");
+        const elements = [];
+        const totalElements = 9;
+
+        // Création des éléments dynamiquement
+        for (let i = 0; i < totalElements; i++) {
+            let element = document.createElement("div");
+            element.classList.add(i % 2 === 0 ? "barre-verticale" : "trait-horizontal");
+            container.appendChild(element);
+            elements.push(element);
+        }
+
+        function startAnimation() {
+            elements.forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.opacity = "1"; // Apparition progressive
+                }, i * 300);
+            });
+
+            // Déplacer les éléments progressivement vers la droite puis disparaître
+            setTimeout(() => {
+                let moveInterval = setInterval(() => {
+                    container.style.transform = `translateX(${parseFloat(container.style.transform.replace('translateX(', '').replace('px)', '')) + 5 || 0}px)`;
+
+                    if (parseFloat(container.style.transform.replace('translateX(', '').replace('px)', '')) >= 500) {
+                        elements.forEach(el => el.style.opacity = "0"); // Disparaît à la fin
+                        clearInterval(moveInterval);
+                        setTimeout(resetAnimation, 500); // Pause avant redémarrage
+                    }
+                }, 50);
+            }, totalElements * 300);
+        }
+
+        function resetAnimation() {
+            container.style.transform = "translateX(0px)"; // Retour au début
+            elements.forEach(el => el.style.opacity = "0"); // Réinitialisation
+            setTimeout(startAnimation, 500); // Redémarrer après une petite pause
+        }
+
+        startAnimation(); // Lancer l'animation
+    </script>
+
+</body>
+</html>
+    

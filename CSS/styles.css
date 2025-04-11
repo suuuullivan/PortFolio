@@ -1,10 +1,338 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
     margin: 0;
-    overflow: hidden;
-    background: black;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    font-family: 'Avenir', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;  
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Canvas en arrière-plan */
 canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 250px; 
+    z-index: 4;
+}
+
+header.scrolled {
+    background: black;
+}
+
+/* PortFolio text */
+header p {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center; 
+    height: 100%;
+}
+
+/* Conteneur de la navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Liens de navigation */
+.navHeader {
+    position: relative;
+    text-decoration: none;
+    margin-right: 15px;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* Création de l'underline */
+.navHeader::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navHeader:hover::after {
+    width: 100%;
+}
+
+.navHeader:not(:hover)::after {
+    width: 0%; 
+    left: auto;
+    right: 0;
+}
+
+/* Main */
+main {
+    position: relative;
+    z-index: 3;
+    margin-top: 20vh;
+}
+
+.line {
+    width: 45%;
+    height: 3px;
+    background: white;
+    margin: 20px auto;
+}
+
+h1 {
+    font-family: 'Avenir';
+    font-size: 72px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+p {
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.rocket {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 10%; 
+    left: -10%;
+    width: 100px;
+    animation: flyRocket 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes flyRocket {
+    0% {
+        left: -10%;
+        top: 25%;
+        opacity: 1;
+    }
+    80% {
+        left: 110%;
+        top: 45%;
+        opacity: 1;
+    }
+    90% {
+        left: 110%;
+        top: 55%;
+        opacity: 0;
+    }
+    100% {
+        left: -10%;
+        top: 25%;
+        opacity: 0;
+    }
+}
+
+.containerTitleLastProjet{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 110px;
+}
+
+.containerTitleLastProjet h2{
+    font-size: xxx-large;
+    font-weight: lighter;
+    font-family: 'Avenir', sans-serif;
+}
+
+.containerTitleLastProjet h3{
+    font-size: xxx-large;
+    font-weight: lighter;
+    font-family: 'Audiowide', sans-serif;
+    margin-top: -20px;
+}
+
+.containerProject{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 35px;
+}
+
+.cardProject {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s;
+    animation: floatAnimation 3s infinite ease-in-out alternate;
+}
+
+.cardProject img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cardProject h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1  ) 100%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.cardProject:nth-child(1) { animation-delay: 0s; animation-duration: 3.2s; }
+.cardProject:nth-child(2) { animation-delay: 0.5s; animation-duration: 3.5s; }
+.cardProject:nth-child(3) { animation-delay: 1s; animation-duration: 3.8s; }
+
+.containerProject:hover .cardProject {
+    filter: brightness(0.5);
+}
+
+.containerProject .cardProject:hover {
+    filter: brightness(1);
+    transform: translateY(-15px); 
+    animation-play-state: paused; 
+}
+
+.button {
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    bottom: -120%;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: white;
+    border-radius: 50% 50% 0 0;
+    transition: bottom 0.5s ease-in-out, border-radius 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    mix-blend-mode: difference; 
+    transition: color 0.3s ease-in-out;
+}
+
+.button:hover::before {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.containerFooter {
+    position: relative;
+    text-align: center;
+}
+
+.containerFooter img {
+    width: 100%;
+    max-height: 260px; 
+    object-fit: cover; 
+    object-position: top;
+    display: block;
+}
+
+.footerTop {
+    background: linear-gradient(to bottom, rgba(226, 155, 111) 0%, rgb(202, 129, 86) 100%);
+    padding: 15px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.footerMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.footerMenu ul{
+    list-style: none;
+    text-align: left;
+}
+
+.titleFooter{
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 15px;
+}
+
+.footerBottom{
+    background: black;
+    padding: 10px 0;
 }
