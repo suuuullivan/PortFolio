@@ -1,7 +1,7 @@
 if (window.OffscreenCanvas) {
     const canvas = document.getElementById("spaceCanvas");
     const offscreen = canvas.transferControlToOffscreen();
-    const worker = new Worker("js/animationWorker.js");
+    const worker = new Worker("../js/animationWorker.js");
 
     worker.postMessage({ canvas: offscreen, width: window.innerWidth, height: window.innerHeight }, [offscreen]);
 
