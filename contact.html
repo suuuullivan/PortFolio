@@ -4,21 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/stylesContact.css">
     <title>Sullivan Bittiger - PortFolio</title>
 </head>
 <body>
     <header>
         <p>PortFolio.</p>
         <nav>
-            <a class="navHeader" href="#">ACCUEIL</a>
-            <a class="navHeader" href="#">PROFIL</a>
-            <a class="navHeader" href="#">PROJETS</a>
+            <a class="navHeader" href="home.html">ACCUEIL</a>
+            <a class="navHeader" href="profil.html">PROFIL</a>
+            <a class="navHeader" href="projets.html">PROJETS</a>
             <a class="navHeader" href="#">CONTACT</a>
         </nav>
     </header>
     <main>
+        <h1 class="titrePContact">Me contacter</h1>
+        <div class="mainContact">
+            <section class="coordSection">
+                <h2 class="coordTitre">Mes coordonnées</h2>
+                <p class="coordGras">Numéro de téléphone :</p>
+                <p class="coordTexte">+33 (0)7 71 13 27 85</p>
+                <p class="coordGras">Adresse mail :</p>
+                <p class="coordTexte">sullivanbittiger@gmail.com</p>
+                <p class="coordGras">Adresse :</p>
+                <p class="coordTexte">01000 Bourg-en-Bresse, France</p>
+            </section>
+        
+            <section class="contactSection">
+                <h2 class="formTitre">Formulaire de contact</h2>
+        
+                <div class="formRow">
+                    <div class="formGroup">
+                        <p class="contactTexte">Nom complet (*)</p>
+                        <input type="text" placeholder="Ex: John Doe" required>
+                    </div>
+                    <div class="formGroup">
+                        <p class="contactTexte">Adresse mail (*)</p>
+                        <input type="email" placeholder="Ex: johndoe@example.com" required>
+                    </div>
+                </div>
+        
+                <div class="formRow">
+                    <div class="formGroup">
+                        <p class="contactTexte">Sujet</p>
+                        <input type="text" placeholder="Ex: Votre sujet">
+                    </div>
+                    <div class="formGroup">
+                        <p class="contactTexte">Numéro de téléphone</p>
+                        <input type="tel" placeholder="+33 7 71 13 27 85">
+                    </div>
+                </div>
+        
+                <div class="formColumn">
+                    <p class="contactTexte">Votre message</p>
+                    <textarea class="inputContactMessage" placeholder="Écrivez votre message ici"></textarea>
+                </div>
+        
+                <button class="sendBtn">Envoyer</button>
+            </section>
+        </div>
         
     </main>
+    
     <footer>
         <div class="containerFooter">
             <img src="IMG/background_footer.png" alt="background_footer">
@@ -32,15 +79,15 @@
                     </ul>
                     <ul>    
                         <li class="titleFooter">Navigation</li>
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Profil</a></li>
-                        <li><a href="">Projets</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="home.html">Accueil</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                     <ul>
                         <li class="titleFooter">Suivez-moi</li>
-                        <li><a href="">Github</a></li>
-                        <li><a href="">Linkedin</a></li>
+                        <li><a href="https://github.com/suuuullivan">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/sullivan-bittiger-b00129277/">Linkedin</a></li>
                         <li><a href="">Instagram</a></li>
                     </ul>
                 </nav>

@@ -1,0 +1,196 @@
+.mainProfil{
+    margin-top: 120px;
+}
+.containerProfilTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.monProfilContent {
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+    color: #fff;
+}
+
+.monProfilContent h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sousTitreProfil{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.monProfilContent p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.containerProfilTop img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #fff;
+}
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item .content {
+    background: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.timeline-item.gauche {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.droite {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #1e1e1e;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.gauche::before {
+    right: -14px;
+}
+
+.timeline-item.droite::before {
+    left: -14px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 8px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.gauche,
+    .timeline-item.droite {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item::before {
+        left: 0;
+    }
+}
+
+
+.titrePageCompetenceProfil{
+    margin-top: 80px;
+    margin-left: 360px;
+    text-align: left;
+}
+
+.titreMes{
+    font-size: 40px;
+}
+
+.titreCompetenceProfil{
+    font-size: 40px;
+}
+
+.sectionCompetence {
+    padding: 0px 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titrePageCompetenceProfil {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+
+.containerBotProfilComp {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.containerLangue {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.containerLangue:hover {
+    transform: scale(1.03);
+}
+
+.containerTitreLangue {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.containerTitreLangue img {
+    width: 40px;
+    height: 40px;
+}
+
+.containerTitreLangue p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.descLangue {
+    font-size: 15px;
+    color: #ccc;
+}

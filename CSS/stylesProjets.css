@@ -1,0 +1,22 @@
+.titrePageProjet{
+    margin-top: 80px;
+    margin-left: 360px;
+    text-align: left;
+}
+
+.titreMes{
+    font-size: 40px;
+}
+
+.sousTitreProjet{
+    font-size: 16px;
+}
+
+.listProjet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 30px;
+}

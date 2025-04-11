@@ -105,7 +105,7 @@ nav {
 }
 
 /* Main */
-main {
+.mainHome {
     position: relative;
     z-index: 3;
     margin-top: 20vh;
