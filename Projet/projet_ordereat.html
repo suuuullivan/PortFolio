@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/stylesPresentationProjet.css">
+    <title>Sullivan Bittiger - PortFolio</title>
+</head>
+<body>
+    <header>
+        <p>PortFolio.</p>
+        <nav>
+            <a class="navHeader" href="../home.html">ACCUEIL</a>
+            <a class="navHeader" href="../profil.html">PROFIL</a>
+            <a class="navHeader" href="../projets.html">PROJETS</a>
+            <a class="navHeader" href="../contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <main>
+        <section class="projectPresentation">
+            <div class="containerProjet">
+                <img class="imageProjet" src="../IMG/PROJET/orderEat.png" alt="orderEat">
+                <div class="textBlock right">
+                    <a class="flecheRetourProjet" href="../projets.html">&lt; RETOUR AUX PROJETS</a>
+                    <h3>OrderEat</h3>
+                    <p>
+                        OrderEat est un projet réalisé en groupe de 4 personnes dans le cadre d’une SAE de deuxième année (200h).
+                        Il permet de digitaliser l'expérience en restaurant à travers une plateforme complète : un site web pour les restaurateurs
+                        et deux applications mobiles distinctes, conçues pour les clients et les serveurs.
+                        Je me suis concentré sur la conception et le développement des deux applications mobiles.
+                    </p>                    
+                    <div class="listLangage">
+                        <img src="../IMG/ICONE/kotlin.png" alt="kotlin">
+                        <img src="../IMG/ICONE/java.png" alt="java">
+                        <img src="../IMG/ICONE/mysql.png" alt="mysql">
+                        <img src="../IMG/ICONE/figma.png" alt="figma">
+                        <img src="../IMG/ICONE/git.png" alt="git">
+                    </div>
+                    <a href="https://iutbg-gitlab.iutbourg.univ-lyon1.fr/2023-2024-sae-but2">Lien projet Flutter<img src="../IMG/ICONE/github.png" alt="github"></a>
+
+                </div>
+
+            </div>
+            
+            <div class="projectSection row">
+                <div class="multiImages">
+                    <img src="../IMG/PROJET/serveur1.png" alt="serveur">
+                    <img src="../IMG/PROJET/serveur2.png" alt="serveur">
+                </div>
+                <div class="textBlock right">
+                    <h4>Application Serveur (Kotlin)</h4>
+                    <p>
+                        Développée avec Jetpack Compose, l'application serveur est utilisée par les employés du restaurant.
+                        Elle permet de visualiser en temps réel les commandes passées depuis les tables, de changer leur statut (en cours, prêt, livré)
+                        et d'assurer un bon suivi sans support papier.  
+                        Un écran spécifique donne accès à l’historique des commandes et aux détails par plat commandé.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projectSection row reverse">             
+                <div class="textBlock left">
+                    <h4>Application Client (Java)</h4>
+                    <p>
+                        Pensée pour simplifier l’expérience client, cette application permet aux clients de consulter la carte du restaurant, ajouter des plats au panier
+                        et passer commande directement depuis leur table.  
+                        Un QR code unique identifie chaque table, et le client reçoit un suivi de l’avancement de sa commande en temps réel.
+                    </p>
+                </div>
+                <div class="multiImages">
+                    <img src="../IMG/PROJET/listeresto.png" alt="client">
+                    <img src="../IMG/PROJET/menu.png" alt="client">
+                    <img src="../IMG/PROJET/paniercomplet.png" alt="client">
+                    <img src="../IMG/PROJET/scanqr.png" alt="client">
+                </div>   
+            </div>
+        
+            <div class="gallerySection">
+                <h4>Galerie</h4>
+                <div class="galleryGrid">
+                    <img src="../IMG/PROJET/panierbientotvide.png" alt="Galerie">
+                    <img src="../IMG/PROJET/paniervide.png" alt="Galerie">
+                    <img src="../IMG/PROJET/profilorder.png" alt="Galerie">
+                    <img src="../IMG/PROJET/unresto.png" alt="Galerie">
+                    <img src="../IMG/PROJET/deletetable.png" alt="Galerie">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="containerFooter">
+            <img src="../IMG/background_footer.png" alt="background_footer">
+            <div class="footerTop">
+                <nav class="footerMenu">      
+                    <ul>
+                        <li class="titleFooter">Coordonnées</li>
+                        <li>+33 (0)7 71 13 27 85</li>
+                        <li><a href="">sullivanbittiger@gmail.com</a></li>
+                        <li>France</li>
+                    </ul>
+                    <ul>    
+                        <li class="titleFooter">Navigation</li>
+                        <li><a href="../home.html">Accueil</a></li>
+                        <li><a href="../profil.html">Profil</a></li>
+                        <li><a href="../projets.html">Projets</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                    <ul>
+                        <li class="titleFooter">Suivez-moi</li>
+                        <li><a href="https://github.com/suuuullivan">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/sullivan-bittiger-b00129277/">Linkedin</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy; 2025 - Tous droits réservés - Créé par Bittiger Sullivan</p>
+        </div>
+    </footer>
+    
+    <canvas id="spaceCanvas"></canvas>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

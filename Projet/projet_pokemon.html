@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/stylesPresentationProjet.css">
+    <title>Sullivan Bittiger - PortFolio</title>
+</head>
+<body>
+    <header>
+        <p>PortFolio.</p>
+        <nav>
+            <a class="navHeader" href="../home.html">ACCUEIL</a>
+            <a class="navHeader" href="../profil.html">PROFIL</a>
+            <a class="navHeader" href="../projets.html">PROJETS</a>
+            <a class="navHeader" href="../contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <main>
+        <section class="projectPresentation">
+            <div class="containerProjet">
+                <img class="imageProjet" src="../IMG/PROJET/Pokemon_Ultimate.jpg" alt="Messagerie sécurisée">
+                <div class="textBlock right">
+                    <a class="flecheRetourProjet" href="../projets.html">&lt; RETOUR AUX PROJETS</a>
+                    <h3>Pokemon Card Ultimate</h3>
+                    <p>
+                        Pokémon Ultimate Card est une application mobile développée en duo, permettant aux utilisateurs de collectionner des cartes Pokémon de manière interactive.
+                        L’application offre une navigation fluide entre la consultation de sa collection personnelle, l’exploration du catalogue complet, et la recherche avancée à l’aide de multiples filtres.
+                    </p>                    
+                    <div class="listLangage">
+                        <img src="../IMG/ICONE/kotlin.png" alt="kotlin">
+                        <img src="../IMG/ICONE/flutter.png" alt="flutter">
+                        <img src="../IMG/ICONE/figma.png" alt="figma">
+                        <img src="../IMG/ICONE/git.png" alt="git">
+                    </div>
+                    <a href="https://github.com/suuuullivan/PokemonCardOnFlutter">Lien projet Flutter<img src="../IMG/ICONE/github.png" alt="github"></a>
+                    <a href="https://github.com/NicolasBourdin88/PokemonCardMobileApp">Lien projet Kotlin <img src="../IMG/ICONE/github.png" alt="github"></a>
+                </div>
+            </div>
+            
+            <div class="projectSection row reverse">
+                <div class="multiImages">
+                    <img src="../IMG/PROJET/collection.jpg" alt="Filtrage">
+                    <img src="../IMG/PROJET/pokemonfiltre.jpg" alt="Résultats de recherche">
+                </div>                
+                <div class="textBlock right">
+                    <h4>Fonctionnalités principales</h4>
+                    <ul>
+                        <li>Chercher par rareté, type de pokemon, objet ou dresseur</li>
+                        <li>Sélectionner, voir une collection</li>
+                        <li>Sélectionner une carte</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="projectSection row reverse">
+                <div class="textBlock left">
+                    <h4>Informations sur les cartes</h4>
+                    <p>
+                        Chaque carte affiche son nom, son numéro dans la collection, son prix actuel ainsi qu’un indicateur visuel de son évolution (hausse, baisse ou stable).
+                        Un lien permet d’accéder directement à un site partenaire pour l’acheter.  
+                        Il est également possible d’ajouter la carte à ses favoris et même de l’incliner en temps réel en penchant le téléphone, pour une interaction plus immersive.
+                    </p>
+                </div>
+                <img src="../IMG/PROJET/detailcartes.jpg" alt="Image projet 3">
+            </div>
+            
+        
+            <div class="projectSection row reverse">
+                <img src="../IMG/PROJET/booster.jpg" alt="Image projet 3">
+                <div class="textBlock right">
+                    <h4>Les boosters</h4>
+                    <p>
+                        Une fonctionnalité permet de simuler l’ouverture d’un booster Pokémon : les cartes s’affichent aléatoirement comme dans un véritable pack.
+                        Celles obtenues peuvent ensuite être ajoutées automatiquement à sa collection, renforçant l’aspect immersif de l’application.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="containerFooter">
+            <img src="../IMG/background_footer.png" alt="background_footer">
+            <div class="footerTop">
+                <nav class="footerMenu">      
+                    <ul>
+                        <li class="titleFooter">Coordonnées</li>
+                        <li>+33 (0)7 71 13 27 85</li>
+                        <li><a href="">sullivanbittiger@gmail.com</a></li>
+                        <li>France</li>
+                    </ul>
+                    <ul>    
+                        <li class="titleFooter">Navigation</li>
+                        <li><a href="../home.html">Accueil</a></li>
+                        <li><a href="../profil.html">Profil</a></li>
+                        <li><a href="../projets.html">Projets</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                    <ul>
+                        <li class="titleFooter">Suivez-moi</li>
+                        <li><a href="https://github.com/suuuullivan">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/sullivan-bittiger-b00129277/">Linkedin</a></li>
+                        <li><a href="">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy; 2025 - Tous droits réservés - Créé par Bittiger Sullivan</p>
+        </div>
+    </footer>
+    
+    <canvas id="spaceCanvas"></canvas>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

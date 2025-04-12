@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.projectPresentation{
+    margin-top: 180px;
+}
+
+.containerProjet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.containerProjet h3, h4{
+    font-family: 'Audiowide', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.flecheRetourProjet {
+    font-size: 14px;
+    color: #00bfff;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.listLangage {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.listLangage img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.projectSection.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.projectSection.row.reverse {
+    flex-direction: row-reverse;
+}
+
+.projectSection .multiImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imageProjet,
+.projectSection img,
+.multiImages img {
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.textBlock {
+    max-width: 500px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.textBlock h4,
+.textBlock h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.textBlock ul,
+.textBlock p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+.textBlock.left {
+    text-align: right;
+}
+
+.textBlock.right {
+    text-align: left;
+}
+
+.gallerySection {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallerySection h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    gap: 20px;
+}
+
+.galleryGrid img {
+    width: 260px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.textBlock a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    color: #00bfff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.textBlock a img {
+    width: 36px;
+    height: 36px;
+}
