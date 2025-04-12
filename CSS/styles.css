@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+canvas {
+    will-change: transform;
+}
+
 html {
     scroll-behavior: smooth;
 }
